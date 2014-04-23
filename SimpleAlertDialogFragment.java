@@ -1,4 +1,4 @@
-package com.gastrograph.dialogs;
+ackage com.gastrograph.dialogs;
 
 import android.R;
 import android.app.AlertDialog;
@@ -16,7 +16,7 @@ import android.support.v4.app.DialogFragment;
  * Creates a dialog a general AlertDialog. The caller must implement the
  * positive and negative actions
  */
-public class AlertDialogFragment extends DialogFragment {
+public class SimpleAlertDialogFragment extends DialogFragment {
 	
     /**
      * Positive and negative button listener actions
@@ -32,10 +32,10 @@ public class AlertDialogFragment extends DialogFragment {
 	 */
 	private AlertDialogOnClickListeners onClickListeners;
 	
-    public static AlertDialogFragment newInstance(int icon, int title, 
+    public static SimpleAlertDialogFragment newInstance(int icon, int title, 
     		int message, int posText, int negText) 
     {
-        AlertDialogFragment frag = new AlertDialogFragment();
+        SimpleAlertDialogFragment frag = new SimpleAlertDialogFragment();
         Bundle args = new Bundle();
         
         // Check if valid value supplied
@@ -65,7 +65,7 @@ public class AlertDialogFragment extends DialogFragment {
      * Wrapper for no message
      * @return
      */
-    public static AlertDialogFragment newInstance(int icon, int title, 
+    public static SimpleAlertDialogFragment newInstance(int icon, int title, 
     		int posText, int negText) 
     {
         return newInstance(icon, title, -1, posText, negText);
@@ -75,7 +75,7 @@ public class AlertDialogFragment extends DialogFragment {
      * Wrapper for default negative negative
      * @return
      */
-    public static AlertDialogFragment newInstance(int icon, int title, 
+    public static SimpleAlertDialogFragment newInstance(int icon, int title, 
     		int posText) 
     {
         return newInstance(icon, title, -1, posText, -1);
@@ -85,7 +85,7 @@ public class AlertDialogFragment extends DialogFragment {
      * Wrapper for default negative negative
      * @return
      */
-    public static AlertDialogFragment newInstance(int icon, int title) 
+    public static SimpleAlertDialogFragment newInstance(int icon, int title) 
  {
 		return newInstance(icon, title, -1, -1, -1);
 	}
@@ -134,7 +134,7 @@ public class AlertDialogFragment extends DialogFragment {
      * @param listeners
      * @return
      */
-    public AlertDialogFragment setOnClickListners(
+    public SimpleAlertDialogFragment setOnClickListners(
     		AlertDialogOnClickListeners listeners) 
     {
     	this.onClickListeners = listeners;
