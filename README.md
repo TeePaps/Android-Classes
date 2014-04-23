@@ -7,7 +7,7 @@ Just "Open Sourcing" some of my code I use in my Android development.
 ##### SimpleAlertDialogFragment Example #####
 
 ```Java
-AlertDialogFragment dialog = AlertDialogFragment
+SimpleAlertDialogFragment dialog = SimpleAlertDialogFragment
         .newInstance(android.R.drawable.ic_delete, R.string.alert_title,
                 R.string.pos_text)
         .setOnClickListners(new AlertDialogFragment.AlertDialogOnClickListeners() {
